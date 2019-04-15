@@ -78,6 +78,7 @@ p {
 a {
     text-decoration: none;
     color: #fff;
+    -webkit-transition: color 0.25s;
     transition: color 0.25s;
 }
 
@@ -93,9 +94,15 @@ a:hover {
 }
 
 .wrapper--row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .section {
@@ -167,6 +174,7 @@ a:hover {
     padding: .875rem 0;
     outline: transparent;
     border: transparent;
+    background: -webkit-gradient(linear, right top, left top, from(hsl(198, 60%, 50%)), to(hsl(176, 68%, 64%)));
     background: linear-gradient(-90deg, hsl(198, 60%, 50%) 0%, hsl(176, 68%, 64%) 100%);
     font-weight: 700;
     border-radius: 40px;
@@ -186,7 +194,8 @@ a:hover {
 
 .btn--primary {
     display: block;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     width: 240px;
     margin: auto;
 }
@@ -277,7 +286,7 @@ a:hover {
 
 @media screen and (min-width: 1000px) {
     .intro .content {
-        margin: 0 0 10rem;
+        margin: 0 0 5rem;
     }
 }
 
@@ -304,9 +313,15 @@ a:hover {
 
 @media screen and (min-width:800px) {
     .features {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        flex-flow: row wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
     }
 }
 
@@ -322,9 +337,16 @@ a:hover {
 
 /* LEARN MORE */
 .learn-more {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 
 .learn-more figure {
@@ -349,8 +371,13 @@ a:hover {
 
 /* TESTIMONIALS */
 .testimonials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 
 .card {
@@ -360,7 +387,8 @@ a:hover {
     background-color: hsl(219, 30%, 18%);
     border-radius: .5rem;
     margin: 0 auto 1.5rem;
-    box-shadow: 0 0 10px rgba(219, 30, 18, .160);
+    -webkit-box-shadow: 0 0 10px rgba(219, 30, 18, .160);
+            box-shadow: 0 0 10px rgba(219, 30, 18, .160);
 }
 
 .card--quote {
@@ -386,9 +414,15 @@ a:hover {
 }
 
 .card__profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .card>p {
@@ -434,7 +468,8 @@ a:hover {
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin: 0 auto -15rem;
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, .25);
+            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, .25);
     text-align: center;
     position: relative;
 }
@@ -445,34 +480,43 @@ a:hover {
 }
 
 #e-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     width: 100%;
     max-width: 375px;
     margin: auto;
 }
 
-#e-form label {
-    width: 100%;
-}
-
 #e-form input {
+    padding: .875rem;
     outline: transparent;
     border: transparent;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .45);
+    -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, .45);
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, .45);
 }
 
+#e-form label {width: 100%;}
+
 #e-form input[type=email] {
-    width: 100%;
     border-radius: 40px;
-    padding: .875rem;
     margin: 0 0 1.5rem;
     text-align: left;
     font-size: 0.875rem;
 }
 
+
+#e-form input[type=email],
 #e-form input[type=button] {
     width: 100%;
 }
@@ -481,13 +525,13 @@ a:hover {
     #e-form {
         max-width: 710px;
     }
-
-    #e-form label {
-        max-width: 480px;
+    #e-form label {width: auto;}
+    #e-form input[type=email] {
+        width: 480px;
     }
 
     #e-form input[type=button] {
-        max-width: 200px;
+        width: 200px;
     }
 }
 
@@ -498,10 +542,19 @@ a:hover {
 }
 
 .footer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .footer .logo--footer {
@@ -528,8 +581,12 @@ a:hover {
 .footer__social {
     width: auto;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 }
 
 .footer__social li {
@@ -543,9 +600,15 @@ a:hover {
     padding: 0.25rem;
     border-radius: 100%;
     border: thin solid white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .footer__social a:hover {
@@ -561,6 +624,8 @@ a:hover {
 }
 
 .footer__contact div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -574,7 +639,6 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) {
-
     .footer__menu,
     .footer__contact {
         width: auto;
@@ -583,7 +647,10 @@ a:hover {
     }
 
     .footer .wrapper {
-        flex-flow: row wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
     }
 }
 
@@ -595,7 +662,10 @@ a:hover {
     }
 
     .footer .wrapper {
-        flex-flow: row wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
     }
 
     .footer__social {

@@ -9,13 +9,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
-      padding: 1rem 0;
-      font-size: 11px;
-      text-align: center;
+      padding: 3rem 0 0;
+      width: 100%;
+      font-size: 11px !important;
     }
 
     .attribution a {
@@ -28,12 +28,12 @@
 
   <header class="header">
     <div class="wrapper wrapper--row">
-      <a class="logo logo--header"></a>
+      <a href="#" class="logo logo--header" aria-label="Fylo logo"></a>
       <nav>
         <ul class="header__menu">
-          <li><a href="http://">Features</a></li>
-          <li><a href="http://">Team</a></li>
-          <li><a href="http://">Sign In</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Sign In</a></li>
         </ul>
       </nav>
   </header>
@@ -51,7 +51,7 @@
             Fylo stores all your most important files in one secure location. Access them wherever
             you need, share and collaborate with friends family, and co-workers.
           </p>
-          <a href="#" class="btn btn--primary" role="button">Get Started</a>
+          <a href="#" class="btn btn--primary">Get Started</a>
         </div>
       </div>
     </section>
@@ -191,7 +191,7 @@
       </section>
       <!-- EMAIL/CTA -->
       <section class="section">
-        <div class="email-form">
+        <div class="email-form" role="form">
           <h3>
             Get early access today
           </h3>
@@ -200,10 +200,12 @@
             questions, our support team would be happy to help you.
           </p>
           <form action="" id="e-form">
-            <label for="">
-              <input type="email" placeholder="email@example.com">
+            <label for="email" aria-label="enter email">
+              <input type="email" placeholder="email@example.com" id="email">
             </label>
-            <input type="button" value="Get Started For Free" class="btn btn--email">
+            <label for="send" aria-label="send to get started">
+              <input type="button" value="Get Started For Free" class="btn btn--email" id="send">
+            </label>
           </form>
         </div>
       </section>
@@ -269,6 +271,10 @@
               <use xlink:href="#icon-instagram"></use>
             </svg></a></li>
       </ul>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/thecalicoder" target="_blank">thecalicoder</a>.
+      </p>
     </div>
   </footer>
   <script src="js/webfontloader.js"></script>
@@ -279,16 +285,6 @@
       }
     });
   </script>
-  <!-- 
-
--->
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/thecalicoder" target="_blank">thecalicoder</a>.
-    </p>
-  </footer>
   <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
