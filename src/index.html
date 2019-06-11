@@ -9,7 +9,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap" rel="preload"
+    as="style" onload="this.rel = 'stylesheet'">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <link rel="preload" onload="this.rel = 'stylesheet'" as="style" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -261,13 +265,16 @@
           </a></li>
       </ul>
       <ul class="footer__social">
-        <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="facebook"><svg class="icon-social">
+        <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="facebook"><svg class="icon-social"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <use xlink:href="#icon-facebook"></use>
             </svg></a></li>
-        <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="twitter"><svg class="icon-social">
+        <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="twitter"><svg class="icon-social"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <use xlink:href="#icon-twitter"></use>
             </svg></a></li>
-        <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="instagram"><svg class="icon-social">
+        <li><a href="http://" target="_blank" rel="noopener noreferrer" aria-label="instagram"><svg class="icon-social"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <use xlink:href="#icon-instagram"></use>
             </svg></a></li>
       </ul>
@@ -277,14 +284,7 @@
       </p>
     </div>
   </footer>
-  <script src="js/webfontloader.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Raleway:400,700', 'Open Sans:400,700']
-      }
-    });
-  </script>
+
   <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>

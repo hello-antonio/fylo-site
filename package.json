@@ -1,0 +1,32 @@
+{
+  "name": "fylo-dark-theme-landing-page-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Fylo landing page with dark theme and features grid challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "prebuild": "rm -rf docs/*",
+    "start": "parcel serve src/index.html --open --out-dir docs",
+    "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "watch": "parcel watch --out-dir docs src/index.html --no-cache",
+    "deploy": "npm run build && git add . && git commit -a -m 'latest build' && git push origin master"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "parcel-bundler": "^1.11.0",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecalicoder/fylo-dark-theme-landing-page.git"
+  },
+  "author": "Giovanni De Andre <hello.giolara@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thecalicoder/fylo-dark-theme-landing-page/issues"
+  },
+  "homepage": "https://github.com/thecalicoder/fylo-dark-theme-landing-page#readme"
+}
